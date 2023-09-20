@@ -1,7 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { INewsList } from '../../utils/models';
+import { NewsItem } from '../NewsItem/NewsItem';
 
-export const NewsList = () => {
+export const NewsList = (props: INewsList) => {
   return (
-    <div>NewsList</div>
+    <div className="news-list">
+    {props.news.map((newsItem, index) => (
+      <NewsItem key={index} news={newsItem} />
+    ))}
+  </div>
   )
 }

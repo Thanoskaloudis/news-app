@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { News } from './utils/models';
+import { INews } from './utils/models';
+import { NewsList } from './components/NewsList/NewsList';
 import './App.css';
+import axios from 'axios';
 
 function App() {
-const [news, setNews] = useState<News[]>([]);
+const [news, setNews] = useState<INews[]>([]);
 
 useEffect(()=> {
   const apiKey = process.env.REACT_APP_API_KEY;
@@ -26,6 +27,9 @@ useEffect(()=> {
       <header className="app-header">
         <h1>News Reader App</h1>
       </header>
+      <main>
+      <NewsList news={news} />
+      </main>
     </div>
   );
 }
