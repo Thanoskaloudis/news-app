@@ -1,0 +1,14 @@
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: stretch; 
+  margin: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .news-list {
+    grid-template-columns: 1fr;
+  }
+}

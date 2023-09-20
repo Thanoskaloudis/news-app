@@ -1,5 +1,6 @@
 import React from 'react';
 import { INewsItem } from '../../utils/models';
+import './NewsItem.css';
 
 export const NewsItem = (props: INewsItem) => {
   return (

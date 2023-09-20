@@ -13,7 +13,8 @@ useEffect(()=> {
 
   axios.get(apiUrl)
   .then((response)=> {
-    setNews(response.data.articles)
+    setNews(response.data.articles);
+    console.log(response.data.articles);
   })
   .catch((error) => {
     console.error('Error fetching news data:', error);
