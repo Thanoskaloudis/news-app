@@ -1,10 +1,34 @@
 .news-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 3rem;
   justify-content: space-between;
-  align-items: stretch; 
+  align-items: center; 
   margin: 1.5rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 40%;
+}
+
+.pagination button {
+  background: linear-gradient(90deg, #6ba1ffcb, #1766eda6);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.pagination button:hover {
+  background: linear-gradient(90deg, #2558fead, #1349fcc5);
 }
 
 @media (max-width: 768px) {
